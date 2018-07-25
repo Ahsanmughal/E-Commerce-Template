@@ -1,0 +1,173 @@
+@import "variables";
+
+.homeSlider .slick-track .slick-slide{
+	margin-bottom: 0px !important;
+}
+
+.homeSlider .slick-track .slick-slide img{
+	width: 100%;
+}
+.slickk-prev:before {
+	cursor: pointer;
+	content: "\f124";
+	font-family: "Ionicons";
+	position:absolute;
+	top:45%;
+	color: #a7a7a7;
+	font-size: 30px;
+	z-index: 999;
+	left: 20.5%;
+}
+.slickk-next:before {
+	cursor: pointer;
+	content: "\f125";
+	font-family: "Ionicons";
+	position:absolute;
+	top:45%;
+	color: #a7a7a7;
+	font-size: 30px;
+	z-index: 999;
+	right: 20.5%;
+}
+.custom-slick-dots {
+	margin-top: 20px;
+}
+.custom-slick-dots li{
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+.custom-slick-dots li button {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: #dedede;
+}
+.custom-slick-dots li button:before {
+	line-height: 14px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	text-align: center;
+	opacity: .25;
+	background-color: orange;
+	content: '' !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.h-c {
+	margin-top: 65px;
+}
+.h-c figcaption .title{
+	font-size: 28px;
+	text-transform: uppercase;
+}
+.h-c figcaption .btn{
+	width: 247px;
+	height: 42px;
+}
+.h-c figcaption .m3-btn{
+	width: 228px;
+	height: 42px;
+}
+.trending-block{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.trending-block .img-block{
+	height: 250px;
+	border: 1px solid #EFEFEF;
+	position: relative;
+}
+.trending-block .img-block>a>img{
+	max-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.trending-block > h4 {
+	font-size: 12px;
+	color: #101010;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+.trending-block .price {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.trending-block .priceis {
+	color: #101010;
+	font-size: 12px;
+}
+.trending-block .pricewas {
+	color: #101010;
+	font-size: 12px;
+	text-decoration: line-through;
+}
+.trending-block .red {
+	color: red !important;
+}
+@media(max-width: $screen-xs){
+	.slickk-prev:before{ 
+		left: 3%;
+		font-size: 22px;
+	}
+	.slickk-next:before{ 
+		right: 3%;
+		font-size: 22px;
+	}
+	.trending-block{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.trending-block .img-block{
+		height: 200px;
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.h-c .fig{
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.slickk-prev:before{ 
+		left: 3%;
+	}
+	.slickk-next:before{ 
+		right: 3%;
+	}
+	.h-c .fig{
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.slickk-prev:before{ 
+		left: 4%;
+	}
+	.slickk-next:before{ 
+		right: 4%;
+	}
+}

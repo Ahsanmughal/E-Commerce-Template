@@ -1,0 +1,182 @@
+@import "variables";
+/*
+ OLD Footer 
+.footer{border-top: 1px solid $BG-DAR-GRAY; margin-top: 50px; margin-bottom: 40px; }
+.footer-container{border-bottom: 1px solid $BG-DAR-GRAY; padding-bottom: 40px; }
+.footer-heading{margin-bottom: 30px; font-size: 16px; text-transform: uppercase; }
+.footer-links{padding-left: 18px !important; }
+.footer-links>li{list-style: square; }
+.footer-contact>li>a , .footer-links>li>a{font-size: 13px; color: $FNT-FOOTER; line-height: 30px; }
+.footer-contact>li>a:hover, .footer-links>li>a:hover{color: $BTN-ORANGE; } 
+.footer-contact>li>a>i{margin-right: 10px; }
+.social-icons>li>a{font-size: 22px; color: $FNT-FOOTER; }
+.social-icons>li>a:hover{color: $BTN-ORANGE; }
+.economic-icon{max-width: 100px; float: right !important; }
+.footer-trademark{font-size: 12px; color: $FNT-FOOTER; padding-top: 25px; padding-bottom: 25px; }
+ Landscape tablets and medium desktops 992px; and  1199px 
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .economic-icon{max-width: 60px; display: block; }
+}
+ Portrait tablets and small desktops  768px and 991px 
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .economic-icon{max-width: 60px; display: block; }
+}
+ Landscape phones and portrait tablets 767px 
+@media (max-width: $screen-xs-max) {
+  .footer-heading{margin-bottom: 0px; font-size: 13px; }
+  .economic-icon{max-width: 60px !important; display: block; }
+}
+
+ Portrait phones and smaller 480px 
+@media (max-width: $screen-xs) {
+  .footer-heading{margin-bottom: 15px; font-size: 13px; }
+  .footer-contact > li > a, .footer-links > li > a{font-size: 11.5px; color: #333; line-height: 30px; }
+  .economic-icon{max-width: 50px; display: block; }
+  .footer-container .col{padding-left: 5px !important; padding-right: 5px !important; }
+  .footer-contact > li > a > i{margin-right: 7px !important; }
+}
+*/
+
+/* New Footer css */
+
+.footer{
+  border-top: 1px solid $BG-DAR-GRAY;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.footer-container{
+  padding-bottom: 40px;
+  display: table;
+  width: 100%;
+}
+.footer-heading{
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.footer-links{
+  padding-left: 18px !important;
+}
+.footer-links>li{
+  list-style: square;
+}
+.android, .whatsapp, .menamall{
+  list-style: none !important;
+}
+.android:before{
+  content: "\f2d2";
+  font-family: "Ionicons";
+  margin-left: -15px;
+  padding-right: 3px;
+}
+.whatsapp:before{
+  content: "\f4ef";
+  font-family: "Ionicons";
+  margin-left: -15px;
+  padding-right: 3px;
+}
+.menamall:before{
+  content: "\f422";
+  font-family: "Ionicons";
+  margin-left: -15px;
+  padding-right: 3px;
+}
+.footer-container .newsletter {
+  height: 41px;
+  width: 100%;
+  margin: 20px auto 0px;
+  border: 1px solid #E3E1E2;
+  padding: 2px;
+}
+.footer-contact>li>a , .footer-links>li>a{
+  font-size: 13px;
+  color: $FNT-FOOTER;
+  line-height: 30px;
+}
+.footer-contact>li>a:hover, .footer-links>li>a:hover{
+  color: $BTN-ORANGE;
+} 
+.footer-contact>li>a>i{
+  margin-right: 10px;
+}
+.social-icons>li>a{
+  font-size: 22px;
+  color: $FNT-FOOTER;
+}
+.social-icons>li>a:hover{
+  color: $BTN-ORANGE;
+} 
+.economic-icon{
+  max-width: 100px;
+  float: right !important;
+}
+.footer-trademark{
+  font-size: 12px;
+  color: $FNT-FOOTER;
+  border-top: 1px solid $BG-DAR-GRAY;
+}
+.footer-trademark p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 70px;
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .economic-icon{
+    max-width: 60px;
+    display: block;
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .economic-icon{
+    max-width: 60px;
+    display: block;
+  }
+}
+@media (max-width: $screen-xs-max) {
+  .footer-heading{
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+  .economic-icon{
+    max-width: 60px !important;
+    display: block;
+  }
+  .footer-trademark{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-trademark p{
+    line-height: 40px;
+  }
+}
+@media (max-width: $screen-xs) {
+  .footer-heading{
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .footer-contact > li > a, .footer-links > li > a{
+    font-size: 11px;
+    color: #333;
+    line-height: 30px;
+  }
+  .economic-icon{
+    max-width: 50px;
+    display: block;
+    float: none !important;
+    margin: 0px auto;
+  }
+  .footer-container .col{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .footer-contact > li > a > i{
+    margin-right: 7px !important;
+  }
+  .footer-trademark{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-trademark p{
+    line-height: 40px;
+  } 
+} 

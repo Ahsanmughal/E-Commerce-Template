@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-Commerce Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+	<link rel="stylesheet" type="text/css" href="../resources/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/ionicons-master/css/ionicons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/js-offcanvas/js-offcanvas.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/noUiSlider/nouislider.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+</head>
+<body>
+	<main class="c-offcanvas-content-wrap" role="main" aria-labelledby="accesible-offcanvas">
+				<header class="header">
+   			<div class="header-inner">
+		        <!-- mena Top bar -->
+        		<div class="mena-top-bar">
+		    		<div class="container">
+		        		<div class="row">
+		            		<div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+		                		<span>FREE SHIPPING ON ALL LOCAL ORDERS 150 AED & UP</span>
+		            		</div>
+		            		<div class="col-lg-4 col-md-2 col-sm-12 col-xs-12">
+		                		<span class="payment">Secure payment</span>
+		            		</div>
+		            		<div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pd-r-0">
+		                		<span class="return">FREE SHIPPING ON ALL INTL ORDERS 500 AED & UP</span>
+		            		</div>
+		        		</div>
+		    		</div>
+				</div>
+        		<div class="container menamall-header pd-0">
+            		<div class="row header-row">
+		                <!-- Header Logo -->
+        		        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 minpad">
+                		    <a class="toggle-btn js-offcanvas-trigger hidden-lg" data-offcanvas-trigger="off-canvas-left-push">
+                        		<i class="ion-navicon navicon dib" aria-hidden="true"></i>
+                    		</a> <!-- hidden-md -->
+                    		<a href="../index.html" class="dib menamall-logo">
+                        		<img src="../img/logo.png" class="img-responsive logo"/>
+                    		</a>
+                		</div>
+		                <!-- search input it is hidden for small and extra small resolution.--> 
+        		        <div class="col-lg-6 col-md-6 col-sm-2 col-xs-2 hidden-sm hidden-xs minpad" style="padding-right: 0px !important; padding-left: 0px !important;">
+						    <div class="header-search">
+						        <form role="form">
+						            <div class="input-group input-group-lg">
+						                <input type="text" class="form-control no-radius typeahead searchhead loading-spinner" placeholder="Search for..."/>
+						                <span class="input-group-btn">
+						                    <button class="btn btn-default input-btn searchbtn" type="button">
+						                        <span class="ion-ios-search Typeahead-search"></span>
+						                        <i class="fa fa-spinner fa-spin fa-fw Typeahead-spinner" style="display: none;"></i>
+						                    </button>
+						                </span>
+						            </div>
+						        </form>
+						    </div>
+						</div>
+
+                		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 minpad" style="padding-right: 0px !important">
+                    		<ul class="header-right-nav">
+						
+							<!-- Login hidden in small and extra small resolution -->
+							<!-- <li class="login-register">
+	    						<a class="login-header" href="signin.html">login</a>
+								<span class="hidden-md hidden-sm hidden-xs">/</span>
+							</li> -->
+
+							<!-- Register hidden in small and extra small resolution -->
+							<!-- <li class="hidden hidden-sm hidden-xs login-register">
+							    <a class="register-header" href="<?php echo Page::generateUrl("signup",array()); ?>">Register</a>
+							</li> -->
+
+	                        <!-- user dropdown menu  it will appear only when user logged in or small and extra screen resolution. it is hidden for lg and md screen sizes -->
+	                        <li id="userDropdown" class="dropdown user-dropdown">
+							    <a id="user-dropdown" class="dropdown-toggle text-uppercase" data-toggle="dropdown" href="">
+							        <span class="uname">USERNAME</span> <span class="caret"></span>
+							    </a>
+							    <ul class="dropdown-menu dropdown-menu-right custom-dropdown" aria-labelledby="dropdownMenu1">
+							        <li>
+							            <a class="text-uppercase" href="account.html"> <i class="fa fa-cog" aria-hidden="true"></i> My Dashboard </a>
+						    	    </li>
+						        	<li class="divider"></li>
+						        	<li>
+						            	<a class="text-uppercase my-order" href="account.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> My Order </a>
+						        	</li>
+						        	<li class="divider"></li>
+						        	<li>
+							            <a class="text-uppercase" href="../index.html"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+							        </li>
+							    </ul>
+							</li>
+
+
+                	        <!-- search input for sm and xs screen sizes  -->
+                    	    <li class="hidden-lg hidden-md">
+								<a class="dropdown-toggle" data-toggle="search-form" href="#search">
+								    <span class="ion-ios-search search-icon"></span>
+								</a>
+							</li>
+
+	                        <!-- Cart Dropdown -->
+							<li class="dropdown wishlist-dropdown hidden-sm hidden-xs">
+    							<a data-toggle="dropdown" class="dropdown-toggle wishlist-icon wishlist-dropdown-toggle">
+    								<i class="fa fa-heart-o" aria-hidden="true"></i> <span class="wish-item-count">0</span>
+    							</a>
+    							<ul class="dropdown-menu dropdown-menu-right custom-dropdown" aria-labelledby="dropdown1" id="dropdownWishList">
+ 							       	<li>
+            							<div class="media">
+                							<div class="media-left">
+                    							<img src="http://via.placeholder.com/61x46" class="media-object cart-img" style="width:61px;height:46px;">
+                							</div>
+                							<div class="media-body">
+	                    						<div class="row mg0">
+    	                    						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 pd0">
+        	                    						<h5>Aldo Leather Shoes</h5>
+														<p>QTY : 2</p>
+                	        						</div>
+                    	    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pd0">
+                        	    						<h5>89.5 AED</h5>
+						    	                    </div>
+                        							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pd0">
+                            							<a class="pull-right" href=""> <i class="fa fa-close"></i></a>
+                        							</div>
+                    							</div>
+               								</div>
+            							</div>
+        							</li>
+        							<li>
+            							<div class="text-right cart-btns">
+                							<a href="cart.html" class="btn btn-black btn-md">View Cart</a>
+            							</div>	
+       								</li>
+    							</ul>
+							</li>
+                    	</ul>
+                	</div>
+            	</div>
+            	<!-- Search Form group for mobile version full width -->
+            	<div class="search-form-wrapper header-search">
+                	<!-- <form class="search-form" id="" action="">
+                    	<div class="input-group">
+                        	<input type="text" name="search" class="search form-control" placeholder="Search">
+                        	<span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i> </span>
+                    	</div>
+                	</form> -->
+                	<form role="form">
+                    	<div class="input-group input-group-lg">
+                        	<input type="text" class="form-control no-radius typeahead mb-search" placeholder="Search for..."/>
+                        	<span class="input-group-btn">
+	                            <button class="btn btn-default input-btn mb-searchbtn" type="button">
+    	                            <span class="ion-ios-search Typeahead-search"></span>
+        		                        <i class="fa fa-spinner fa-spin fa-fw Typeahead-spinner" style="display: none;"></i>
+                		            </button>
+		                        </span>
+        		            </div>
+                		</form>
+            		</div>
+        		</div>
+       			 <!-- Megamenu -->
+				<div class="menamall-megamenu hidden-sm hidden-xs">
+				<ul class="list-inline">
+					<!-- Women section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Women</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="#">Clothing</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Hoodies and Sweaters</a></li>
+											<li><a href="productlistview.html">Jeans</a></li>
+											<li><a href="productlistview.html">Jumpsuits and Playsuits</a></li>
+											<li><a href="productlistview.html">Leggings and Pants</a></li>
+											<li><a href="productlistview.html">Lingerie and Nightwear</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Shirts</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Accessories</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Bags</a></li>
+											<li><a href="productlistview.html">Belts</a></li>
+											<li><a href="productlistview.html">Hair Accessories</a></li>
+											<li><a href="productlistview.html">Hats</a></li>
+											<li><a href="productlistview.html">Jwellery</a></li>
+											<li><a href="productlistview.html">Scarves and Gloves</a></li>
+											<li><a href="productlistview.html">Sunglasses and Eyewear</a></li>
+											<li><a href="productlistview.html">Watches</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Shoes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Boots</a></li>
+											<li><a href="productlistview.html">Flat Shoes</a></li>
+											<li><a href="productlistview.html">Flip Flop and Sandals</a></li>
+											<li><a href="productlistview.html">Pumps and Heels</a></li>
+											<li><a href="productlistview.html">Sneakers</a></li>
+											<li><a href="productlistview.html">Sport Shoes</a></li>
+											<li><a href="productlistview.html">Slip Ons</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Men section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Men</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Clothing</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Hoodies and Sweaters</a></li>
+											<li><a href="productlistview.html">Jeans</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Pants</a></li>
+											<li><a href="productlistview.html">Polo Shirts</a></li>
+											<li><a href="productlistview.html">Shirts</a></li>
+											<li><a href="productlistview.html">Shorts</a></li>
+											<li><a href="productlistview.html">Sweats and Joggers</a></li>
+											<li><a href="productlistview.html">Sleepwear</a></li>
+											<li><a href="productlistview.html">Sportswear</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Accessories</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Bags</a></li>
+											<li><a href="productlistview.html">Belts</a></li>
+											<li><a href="productlistview.html">Caps and Hats</a></li>
+											<li><a href="productlistview.html">Jwellery</a></li>
+											<li><a href="productlistview.html">Scarves and Gloves</a></li>
+											<li><a href="productlistview.html">Sunglasses and Eyewear</a></li>
+											<li><a href="productlistview.html">Tie and Suit Accessories</a></li>
+											<li><a href="productlistview.html">Wallets</a></li>
+											<li><a href="productlistview.html">Watches</a></li>
+											<li><a href="productlistview.html">Cases and Misc</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Shoes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Boots</a></li>
+											<li><a href="productlistview.html">Formal </a></li>
+											<li><a href="productlistview.html">Sneakers</a></li>
+											<li><a href="productlistview.html">Sport Shoes</a></li>
+											<li><a href="productlistview.html">Sandals</a></li>
+											<li><a href="productlistview.html">Slip Ons</a></li>
+											<li><a href="productlistview.html">Casual</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Kids section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Kids</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Boys</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Accessories</a></li>
+											<li><a href="productlistview.html">Shoes</a></li>
+											<li><a href="productlistview.html">Bottoms</a></li>
+											<li><a href="productlistview.html">Tops</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Swimwear</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Girls</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Accessories</a></li>
+											<li><a href="productlistview.html">Shoes</a></li>
+											<li><a href="productlistview.html">Bottoms</a></li>
+											<li><a href="productlistview.html">Tops</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Swimwear</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Beauty section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Beauty</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">face care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Eyes & lips</a></li>
+											<li><a href="productlistview.html">cleansers</a></li>
+											<li><a href="productlistview.html">exfoliation</a></li>
+											<li><a href="productlistview.html">masks</a></li>
+											<li><a href="productlistview.html">moisterizers & treatments</a></li>
+											<li><a href="productlistview.html">serum and concenterates</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">skin care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Deoderants(invisible)</a></li>
+											<li><a href="productlistview.html">Bath & shower</a></li>
+											<li><a href="productlistview.html">Body care</a></li>
+											<li><a href="productlistview.html">hand & foot</a></li>
+											<li><a href="productlistview.html">Dental(invisible)</a></li>
+											<li><a href="productlistview.html">tools & accessories(invisible)</a></li>
+											<li><a href="productlistview.html">sets</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">perfumes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li></li>
+											<li><a href="productlistview.html">fragrances</a></li>
+											<li><a href="productlistview.html">frangrance sets</a></li>
+										</ul>
+										<h4><a class="dropdown-header" href="">gift set</a></h4>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Grooming Section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Grooming</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">face care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Eyes & lips</a></li>
+											<li><a href="productlistview.html">cleansers</a></li>
+											<li><a href="productlistview.html">Mosituerizers and treatments</a></li>
+											<li><a href="productlistview.html">serums and concenterates</a></li>
+											<li><a href="productlistview.html">toners and mist</a></li>
+											<li><a href="productlistview.html">sets</a></li>
+											<li><a href="productlistview.html">exfoliations</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">shaving</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">pre shave</a></li>
+											<li><a href="productlistview.html">shaving</a></li>
+											<li><a href="productlistview.html">aftershave</a></li>
+											<li><a href="productlistview.html">tools and accessories</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">sun care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">face</a></li>
+											<li><a href="productlistview.html">body</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Electronics -->
+					<li class="dropdown mega-dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" >Electronics</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container"> 
+									<div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Televisions</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="productlistview.html">TVs</a></li>
+												<li><a href="productlistview.html">Accessories</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Large Appliances</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="productlistview.html">Washer/Dryer</a></li>
+												<li><a href="productlistview.html">Ovens</a></li>
+												<li><a href="productlistview.html">Hobs/Hoods</a></li>
+												<li><a href="productlistview.html">Dish Washers</a></li>
+												<li><a href="productlistview.html">Refrigerators</a></li>
+												<li><a href="productlistview.html">Water Dispensers</a></li>
+												<li><a href="productlistview.html">Air Conditioner</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Mobiles and Tablets</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="">Mobiles </a></li>
+												<li><a href="">Tablets</a></li>
+												<li><a href="">Smart Watches</a></li>
+												<li><a href="">Accessories</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Laptops</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="">Laptops</a></li>
+												<li><a href="">Gaming Laptops</a></li>
+												<li><a href="">Desktops</a></li>
+											</ul>
+										</div>
+									</div>  
+								</div>
+							</li>
+						</ul>
+					</li>
+
+
+					<!-- Brands -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Brands</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container">
+									<div class="brand-wrapper">
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/adidas.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/nike.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/swarovski.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/armani.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/burberry.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"> <a href="productlistview.html"><img src="../img/mk.png"></a></div>
+											<div class="brand-block"> <a href="productlistview.html"><img src="../img/rayban.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/cartier.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/channel.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/gucci.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/rl.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/christian_louboutian.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/dior.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/prada.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/fendi.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/d_g.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/lacoste.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/jordan.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/ax.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/versace.png"></a></div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Sale -->
+					<li><a href="">Sale</a></li>
+				</ul>
+				</div>
+    		</div>
+		</header>
+
+
+		<div class="main-height"></div>
+		<div class="container">
+			<!-- Desktop Breadcrumbs , hidden on small and extra small screen  -->
+		    <div class="row">
+		        <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+		            <ul class="breadcrumb breadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Clothing</a></li>
+						<li><a href="#">Shirts</a></li>
+						<li><a class="active" href="#">product name</a></li>
+					</ul>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="col-lg-6 col-md-6 col-sm-12">
+		            <div class="hidden-sm hidden-xs pd-slider-nav-list">
+		                <div class="slider pd-slider-nav">
+		                    <div class="pd-slider">
+		                        <div class="pd-slider-nav-block">
+		                            <img src="../img/thumb1.jpg" class="img-responsive"/>
+		                        </div>
+		                    </div>
+		                    <div class="pd-slider">
+		                        <div class="pd-slider-nav-block">
+		                            <img src="../img/thumb2.jpg" class="img-responsive"/>
+		                        </div>
+		                    </div>
+		                    <div class="pd-slider">
+		                        <div class="pd-slider-nav-block">
+		                            <img src="../img/thumb3.jpg" class="img-responsive"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="pd-slider-block">
+		                <div class="slider slider-single">
+		                    <div class="pd-slider-block-box">
+		                        <img src="../img/md1.jpg"/>
+		                    </div>
+		                    <div class="pd-slider-block-box">
+		                        <img src="../img/md2.jpg"/>
+		                    </div>
+		                    <div class="pd-slider-block-box">
+		                        <img src="../img/md3.jpg"/>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-lg-6 col-md-6 col-sm-12">
+		            <div class="pd-description">
+		            	<h4>Wills Lifestyle Men Beige Slim Fit Solid Formal Trousers</h4>
+		            	<h5>By: <a class="brandname" href="">ALPHA INDUSTRIES</a></h5>
+		            	<div class="price-block">
+			            	<h3 class="price">889.89 AED</h3>
+		    	        	<h3 class="price-was">999.58 AED</h3>
+		    	        </div>
+		    	        <div class="review-block">
+		    	        	<span class="color">Color: Brown</span>
+		    	        	<span class="pc"> <b>Product Code :</b> <span class="code">MS-WSW-AB0704</span></span>
+		    	        </div>
+		    	        <div class="filter-block">
+		    	        	<div class="colorfilter">
+		    	        		<div class="form-group required colorblock">
+		                            <label class="control-label">Color</label>
+		                            <select class="form-control selectcolor">
+		                            	<option value="0">Red</option>
+		                            	<option value="1">Brown</option>
+		                            	<option value="1">Blue</option>
+		                            </select>
+		                        </div>
+		    	        	</div>
+		    	        	<div class="sizefilter">
+		    	        		<div class="form-group required sizeblock">
+		                            <label class="control-label">Size</label>
+		                            <a class="pull-right text-small sizechart" href="">SIZE CHART</a>
+		                            <select class="form-control">
+		                            	<option value="0">36</option>
+		                            	<option value="1">40</option>
+		                            	<option value="2">42</option>
+		                            	<option value="3">44</option>
+		                            </select>
+		                        </div>
+		    	        	</div>
+		    	        </div>
+		    	        <div class="control-block">
+		    	        	<div>
+			    	        	<div class="qty-block">
+			    	        		<select class="form-control qty-select">
+			    	        			<option value="0">1</option>
+			    	        			<option value="1">2</option>
+			    	        			<option value="2">3</option>
+			    	        		</select>
+			    	        	</div>
+			    	        	<div class="wish-block">
+			    	        		<a href="" class="btn btn-default wish-btn"><i class="ion-ios-heart-outline"></i> Wish List</a>
+				   	        	</div>
+				   	        	<div class="cart-block">
+									<a href="" class="btn btn-lg btn-black cart-btn"><i class="ion-bag"></i> ADD TO CART</a>
+			    	        	</div>
+			    	        </div>
+			    	        <div class="notice-block">
+			    	        	<p class="notice">Delivered within 2-5 business days When you choose global store priority delivery on checkout.</p>
+			    	        </div>
+			    	        <div class="methods-block">
+			    	        	<div class="shipping-block">
+			    	        		<div class="media">
+			    	        			<div class="media-left">
+			    	        				<i class="fa fa-2x fa-truck" aria-hidden="true"></i>	
+			    	        			</div>
+			    	        			<div class="media-body">
+			    	        				<span class="shipping-title">Free Shipping</span><br/>
+											<span class="shipping-info">For all order above 500 AED</span>
+			    	        			</div>
+			    	        		</div>
+			    	        	</div>
+			    	        	<div class="payment-block">
+			    	        		<div class="media">
+			    	        			<div class="media-left">
+			    	        				<i class="fa fa-2x fa-shield" aria-hidden="true"></i>
+			    	        			</div>
+			    	        			<div class="media-body">
+			    	        				<span class="payment-title">Secure Payment</span><br/>
+											<span class="payment-info">Your payment always protected</span>
+			    	        			</div>
+			    	        		</div>
+			    	        	</div>
+			    	        	<div class="return-block">
+			    	        		<div class="media">
+			    	        			<div class="media-left">
+			    	        				<i class="ion-arrow-return-left" aria-hidden="true"></i>	
+			    	        			</div>
+			    	        			<div class="media-body">
+			    	        				<span class="return-title">Easy Return</span><br/>
+											<span class="return-info">For any damaged or defective product.</span>
+			    	        			</div>
+			    	        		</div>
+			    	        	</div>
+			    	        </div>
+			    	        <div class="share-block">
+			    	        	<ul class="list-inline pull-right">
+			    	        		<li><span>Share :</span></li>
+			                        <li><a href=""><i class="ion-social-facebook"></i></a></li>
+			                        <li><a href=""><i class="ion-social-twitter"></i></a></li>
+			                        <li><a href=""><i class="ion-social-instagram-outline"></i></a></li>
+			                        <li><a href=""><i class="ion-social-googleplus-outline"></i></a></li>
+			                        <li><a href=""><i class="ion-social-pinterest-outline"></i></a></li>
+			    	        	</ul>
+			    	        </div>
+		    	        </div>
+		            </div>
+		        </div>
+		    </div>
+
+
+			<!-- Product Description Tabs -->
+			<section style="border-bottom:1px solid #dedede; margin-top: 35px; margin-bottom: 30px; padding-bottom: 70px;">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-panel pd-tabs">
+							<div class="table-line">
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#product-description" data-toggle="tab">Description </a></li>
+									<li><a href="#video" data-toggle="tab">Video</a></li>
+									<li><a href="#brand" data-toggle="tab">About The Brand</a></li>
+								</ul>
+								<div class="tab-content">
+									<!-- Product Description -->
+									<div class="tab-pane active" id="product-description">
+										<p>Coupling a blended linen construction with tailored style, the River Island HR Jasper Blazer will imprint a touch of dapper charm into your after-dark wardrobe. Our model wearing a size medium blazer, and usually takes a size medium/38L shirt. He is 6’2 1/2” (189cm) tall with a 38” (96 cm) chest and a 31” (78 cm) waist.</p>
+										<ul class="list-unstyled">
+											<li>Length: 74cm</li>
+											<li>Regular: Fit</li>
+											<li>Notched lapels</li>
+											<li>Two button front fastening</li>
+											<li>Front patch pockets : chest pocket</li>
+											<li>Internal Pockets</li>
+											<li>Center back vent</li>
+											<li>Please refer to the garment for care instructions</li>
+											<li>Length:74 cm</li>
+											<li>Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate</li>
+										</ul>
+									</div>
+									<!-- Size Guide -->
+									<div class="tab-pane" id="video">
+										<p>Video</p>
+									</div>
+									<!-- Brand Guide  -->
+									<div class="tab-pane" id="brand">
+										<p>Brand Guide</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+
+		<div class="footer"></div>
+		<div class="container">
+			<div class="row footer-container">
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Information</h5>
+						<ul class="footer-links">
+							<li><a href="">About Us</a></li>
+							<li><a href="">Our Team</a></li>
+							<li><a href="">Career</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">My Account</h5>
+						<ul class="footer-links">
+							<li><a href="">My Account</a></li>
+							<li><a href="">Order History</a></li>
+							<li><a href="">Order Tracking</a></li>
+							<li><a href="">Wish List</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Policies</h5>
+						<ul class="footer-links">
+							<li><a href="">Delivery</a></li>
+							<li><a href="">Return & Refund</a></li>
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Intellectial Property</a></li>
+							<li><a href="">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Customer Service</h5>
+						<ul class="footer-links">
+							<li><a href="">Working Hours</a></li>
+							<li><a href="">Contact Us</a></li>
+							<li class="android"><a href=""> (+971)4 521 4800 </a></li>
+							<li class="whatsapp"><a href=""> (+971)4 521 4800 </a></li>
+							<li class="menamall"><a href=""> cs@menamall.com </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col">
+					<div class="col-footer">
+						<div class="pull-left">
+							<h5 class="footer-heading">Follow us</h5>
+							<ul class="list-inline social-icons">
+								<li><a href="https://www.facebook.com/menamallHQ/"><i class="ion-social-facebook"></i></a></li>
+								<li><a href="https://www.twitter.com/menamallHQ"><i class="ion-social-twitter"></i></a></li>
+								<li><a href="https://www.instagram.com/menamallhq/"><i class="ion-social-instagram-outline"></i></a></li>
+								<li><a href=""><i class="ion-social-pinterest-outline"></i></a></li>
+								<li><a href=""><i class="ion-social-googleplus-outline"></i></a></li>
+							</ul>
+							<div class="newsletter">
+								<form id="subscribe-form">
+									<div class="input-group">
+										<input class="form-control" name="email" type="email" placeholder="E-MAIL">
+										<span class="input-group-btn">
+											<button id="subscribe" class="btn btn-md btn-black" type="button">SUBSCRIBE</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center footer-trademark">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div style="padding: 10px;">
+						<p>© 2018 KSK General Trading L.L.C</p>
+						<div class="economic-icon">
+							<img src="../img/ecnomic-icon.png" class="img-responsive"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"left,push"}' id="off-canvas-left-push" role="complementary">
+        <ul class="list-unstyled side-nav-ul">
+            <li> <a href="../index.html">Home</a> </li>
+            <li> <a href="account.html">My Account</a> </li>
+            <li><label>Categories</label></li>
+            <li>
+                <a href="#women" data-toggle="collapse">Women <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="women">
+                    <a href="productlistview.html" class="list-group-item">Clothing</a>
+                    <a href="productlistview.html" class="list-group-item">Accessories</a>
+                    <a href="productlistview.html" class="list-group-item">Shoes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#men" data-toggle="collapse">Men <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="men">
+                    <a href="productlistview.html" class="list-group-item">Clothing</a>
+                    <a href="productlistview.html" class="list-group-item">Accessoreis</a>
+                    <a href="productlistview.html" class="list-group-item">Shoes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#kids" data-toggle="collapse">Kids <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="kids">
+                    <a href="productlistview.html" class="list-group-item">Boys</a>
+                    <a href="productlistview.html" class="list-group-item">Girls</a>
+                    <a href="productlistview.html" class="list-group-item">Toys</a>
+                </div>
+            </li>
+            <li>
+                <a href="#beauty" data-toggle="collapse">Beauty <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="beauty">
+                    <a href="productlistview.html" class="list-group-item">Hair Care</a>
+                    <a href="productlistview.html" class="list-group-item">Make Up And Accessories</a>
+                    <a href="productlistview.html" class="list-group-item">Nail Care</a>
+                </div>
+            </li>
+            <li>
+                <a href="#grooming" data-toggle="collapse">Grooming <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="grooming">
+                    <a href="productlistview.html" class="list-group-item">Face Care</a>
+                    <a href="productlistview.html" class="list-group-item">Hair Care</a>
+                    <a href="productlistview.html" class="list-group-item">Shaving</a>
+                </div>
+            </li>
+            <li>
+                <a href="#brands" data-toggle="collapse">Brands <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="brands">
+                    <a href="productlistview.html" class="list-group-item">Adidas</a>
+                    <a href="productlistview.html" class="list-group-item">Nike</a>
+                    <a href="productlistview.html" class="list-group-item">Louis Vitton</a>
+                </div>
+            </li>
+            <li> <a>Sale</a> </li>
+        </ul>
+    </aside>
+
+
+	<script type="text/javascript" src="../resources/bootstrap/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/bootstrap/js/bootstrap.min.js"></script>
+	<!--  js-offcanvas  -->
+	<script type="text/javascript" src="../resources/js-offcanvas/modernizr.js"></script>
+	<script type="text/javascript" src="../resources/js-offcanvas/js-offcanvas.pkgd.min.js"></script>
+	<!-- nouislider for min/max price -->
+	<script type="text/javascript" src="../resources/noUiSlider/wNumb.js"></script>
+	<script type="text/javascript" src="../resources/noUiSlider/nouislider.js"></script>
+	<!-- Typehead -->
+	<script type="text/javascript" src="../resources/typehead/typeahead.bundle.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="../resources/slick/slick.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>	

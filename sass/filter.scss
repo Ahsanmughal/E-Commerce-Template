@@ -1,0 +1,289 @@
+@import "variables";
+
+
+/* Full Screen Modal Dialog */
+
+.modal-fullscreen {
+  padding: 0 !important;
+}
+
+.modal-fullscreen .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-fullscreen .modal-content {
+  height: auto;
+  min-height: 100%;
+  border: 0 none;
+  border-radius: 0;
+}
+
+#rangeslider{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.refinements-selected li{
+  margin-bottom: 10px;
+}
+
+.refinements-selected li span{
+  border: 1px solid #e2e2e2;
+  background-color: $BG-DAR-GRAY;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  display: inline-block;
+  width: auto;
+}
+.refinements-selected li span a{
+  color:$BTN-BLACK;
+  float: right;
+  margin-left: 10px;
+}
+
+
+
+/* Filter section on product list view */
+.filter-section{
+  border-bottom: 1px solid $FNT-DARK-GREY;
+}
+.filter-section:last-child{
+  border-bottom: 1px transparent;
+}
+.filter-container{
+  padding-bottom: 20px;  
+}
+.filter-section .filter-head{
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+.filter-section .filter-input{
+  margin-bottom: 25px;
+}
+
+.filter-head>a:after {
+  font-family: FontAwesome;
+  content: "\f068";
+  float: right;
+}
+.filter-head>a.collapsed:after {
+  content: "\f067";
+}
+
+/* Filter Sizes on product list view */
+.priceclear{
+  color: $BTN-ORANGE !important;
+}
+.pricerangeclear{
+  color: $BTN-ORANGE !important; 
+}
+
+
+.sizes-list{
+  max-height: 250px;
+  overflow-y:auto; 
+}
+.size-fb>ul, .sizes-list>ul{
+  padding-left: 0px;  
+}
+.size-fb>ul>li,.sizes-list>ul>li{
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.size-fb>ul>li, .sizes-list label{
+  max-width: 96px;
+}
+.size-fb>ul>li>label, .sizes-list>ul>li>label{
+  background-color: $BG-GRAY;
+  border: 1px solid #dadada;
+  min-width: 2.4285714286rem;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+  transition: all 150ms ease-in-out;
+  margin: 0;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  padding:5px;
+  cursor: pointer;
+}
+
+.sizes-listactive{
+  background-color: $BTN-ORANGE !important;
+  border: 1px solid $BTN-ORANGE;
+  color: #fff;
+}
+
+/* Large desktops and laptops 1200px */
+@media (min-width: $screen-lg-min) {
+  .filter-section .filter-block{
+    max-height: 250px;
+    overflow-y:auto; 
+  }
+  .filter-section .filter-block>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .filter-block>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+}
+
+/* Landscape tablets and medium desktops 992px; and  1199px */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  /* Filter Block */
+  .filter-section .filter-block{
+    max-height: 250px;
+    overflow-y:auto; 
+  }
+  .filter-section .filter-block>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .filter-block>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+}
+
+/* Portrait tablets and small desktops  768px and 991px */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  /* Filter Block */
+  .filter-section .filter-block{
+    max-height: 250px;
+    overflow-y:auto; 
+  }
+  .filter-section .filter-block>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .filter-block>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+}
+
+
+/* Landscape phones and portrait tablets 767px */
+@media (max-width: $screen-xs-max) {
+  /* Full Sceen Modal*/
+  .modal-fullscreen-xs-down {
+    padding: 0 !important;
+  }
+  .modal-fullscreen-xs-down .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-fullscreen-xs-down .modal-content {
+    height: auto;
+    min-height: 100%;
+    border: 0 none;
+    border-radius: 0;
+  }
+
+    /* Filter Block */
+  .filter-section .filter-block{
+    max-height: 100px;
+    overflow-y:hidden; 
+  }
+  .filter-section .filter-block>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .filter-block>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+
+  .filter-section .sizes-list{
+    max-height: 100px;
+    overflow-y:hidden;
+  }
+
+  .filter-section .show-more{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .filter-section .fb>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .fb>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+
+  /* Brand Show more/less  */
+  .filter-section .brand-show-more{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .filter-section .brand-fb>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .brand-fb>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+
+  /* Category Show more/less */
+  .filter-section .category-show-more{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .filter-section .category-fb>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .category-fb>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+
+  /* Product Type Show more/less */
+  .filter-section .type-show-more{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .filter-section .type-fb>ul>li{
+    padding-bottom: 5.71px;
+  }
+  .filter-section .type-fb>ul>li>label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $FNT-BLACK;
+  }
+
+  /* Size Filter */
+  .filter-section .sizes-show-more {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .filter-section .size-clear{
+    color:$BTN-ORANGE;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: block
+  }
+}

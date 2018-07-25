@@ -1,0 +1,64 @@
+@import "variables";
+
+/* Mena Top bar */
+.mena-top-bar{
+  background-color: #252525;
+  height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.mena-top-bar span{
+  font-size: 12px;
+  line-height: 40px;
+}
+.mena-top-bar .pd-r-0{
+ padding-right: 0px !important;
+}
+.mena-top-bar .payment{
+  text-align: center;
+  display: block;
+}
+.mena-top-bar .return{
+  text-align: right;
+  display: block;
+}
+
+/* Portrait tablets and small desktops  768px and 991px */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.mena-top-bar{
+    	height: 100%; 
+	  }
+  	.mena-top-bar .pd-r-0{
+    	padding-right: 15px !important;
+	}
+  .mena-top-bar .return{
+    text-align: left;
+    display: block;
+  }
+  .mena-top-bar .payment{
+    text-align: left;
+    display: block;
+  }
+}
+
+/* Portrait phones and smaller 480px */
+@media (max-width: $screen-xs) {
+	.mena-top-bar{
+    	height: 100%; 
+	  }
+    .mena-top-bar span{
+      line-height: 30px;
+      font-size:10px;
+    }
+  	.mena-top-bar .pd-r-0{
+    	padding-right: 15px !important;
+	}
+  	.mena-top-bar .payment{
+    	text-align: left;
+      display: block;
+	}
+  	.mena-top-bar .return{
+      text-align: left;
+      display: block;
+	}
+}

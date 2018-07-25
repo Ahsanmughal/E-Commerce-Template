@@ -1,0 +1,24 @@
+/* select */
+select {
+  padding: 5px 15px 5px 5px;
+  font-family: inherit;
+  line-height: normal;
+  background-color: #fefefe;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("http://res.cloudinary.com/dya3lk1ns/image/upload/v1515217841/arrow_y2rjce.svg") !important;
+  background-size: 9px 6px;
+  background-position: right -8px center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+.form-control{
+  border-radius: 0px !important;
+}
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}

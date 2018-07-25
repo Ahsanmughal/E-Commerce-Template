@@ -1,0 +1,62 @@
+@import "variables";
+
+/* Contact Us */
+.contact-container .contact-phone, .contact-container .contact-address{
+  border-right: 1px solid #dddddd;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 230px;
+}
+.contact-container .component{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.contact-container .contact-phone h4, .contact-container .contact-address h4, .contact-container .contact-email h4{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact-container .contact-phone p, .contact-container .contact-address p, .contact-container .contact-email p{
+  font-size: 13px;
+  color: $FNT-DARK-GREY;
+}
+.contact-container .contact-phone i , .contact-container .contact-address i, .contact-container .contact-email i{
+  font-size: 30px;
+}
+.contact-container .contact-email{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 230px;
+}
+.contact-container .contact-block{
+  max-width: 600px;
+  margin:0px auto;
+  display: block;
+}
+.contact-container .contact-block .quest{
+  margin-bottom: 50px;
+}
+.contact-container .contact-block .quest h4{
+  color: $FNT-BLACK;
+  text-transform: uppercase;
+}
+.contact-container .contact-block .form-control{
+  background-color: $BG-DAR-GRAY;
+}
+.contact-container .contact-block .form-control:focus{
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+}
+.contact-container .contact-block .form-group{
+  margin-bottom: 25px;
+}
+.contact-container textarea{
+  resize:none;
+}
+.contact-container .contact-block .btn{
+  margin-top: 60px;
+}

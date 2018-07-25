@@ -1,0 +1,147 @@
+@import "variables";
+
+/* POP-UP REGISTERATION */
+#registernowModal .modal-dialog {
+  -webkit-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  top: 50%;
+  margin: 0 auto;
+}
+
+.registernowModal .modal-content{
+  border-radius: 0px !important;
+}
+.registernowModal .modal-body{
+  padding: 10px !important;
+}
+.registernowModal .registerbg{
+  background-color: $BG-ORANGE;
+  height: 400px;
+  color: #ffffff;
+  border:2px solid #ad6401;
+}
+.registernowModal .cancel-block{
+  margin-bottom: 30px;
+  min-height: 42px;
+}
+.registernowModal .cancel-block-btn{
+  height: 41px;
+  width: 41px;
+  line-height: 41px;
+  background-color: #d08707;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.registernowModal .heading-block{
+  margin-bottom: 30px;
+}
+.registernowModal .heading{
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.registernowModal .description{
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.registernowModal .description .promocode{
+  text-decoration: underline;
+}
+.registernowModal .registerbtn{
+  background-color: #111111;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+}
+.registernowModal .registerbtn:hover , .registernowModal .registerbtn:focus{
+  background-color: #ffffff;
+  color: #111111;
+  text-transform: uppercase;
+  border-radius: 0px !important; 
+}
+
+.registernowModal .checkbox * {
+  cursor: pointer;
+}
+.registernowModal .checkbox {
+  padding-left: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+.registernowModal .checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+.registernowModal .checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.registernowModal .checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 2px;
+  margin-left: -19px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+.registernowModal .checkbox input[type="checkbox"]{
+  opacity: 0;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+.registernowModal .checkbox input[type="checkbox"]:checked + label::after{
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+.registernowModal .checkbox-black  input[type="checkbox"]:checked + label::after{
+  color: #fff;
+}
+.registernowModal .checkbox-black input[type="checkbox"] + label::before {
+  background-color: $BG-ORANGE;
+  border-color: #000000;
+}
+.registernowModal input[type="checkbox"].styled:checked + label:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+/* Portrait phones and smaller 480px */
+@media (max-width: $screen-xs) {
+  .registernowModal .registerbg{
+    height: 100%;
+  }
+  .registernowModal .heading{
+    font-size: 20px;
+  }
+  .registernowModal .description{
+    font-size: 14px;
+  }
+}

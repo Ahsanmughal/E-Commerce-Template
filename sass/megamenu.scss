@@ -1,0 +1,126 @@
+@import "variables";
+
+/* Mega Menu */
+.menamall-megamenu{
+  height: 43px;
+  background-color: #efefef;
+  color: $FNT-BLACK;
+  // margin-bottom: 40px;
+  // margin-bottom: 26px;
+  text-align: center;
+}
+
+.menamall-megamenu>ul>li>a{
+  color: $FNT-BLACK;
+  padding:13px 12px 13px 12px;
+  text-transform: uppercase;
+  line-height: 42.5px;
+  font-size: 12px;
+}
+
+.menamall-megamenu-hover, .menamall-megamenu-active{
+  color: $FNT-BLACK;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-top: 2px solid $BTN-ORANGE;
+}
+
+.mg-active{
+  border-top: 2px solid red;
+  background-color:red !important;
+  color: #ffffff !important;
+}
+
+
+
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  top: auto;
+  // min-height: 420px;
+  // max-height: 420px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.23);
+  border-radius: 0px !important;
+  border:transparent !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  padding-bottom: 25px !important;
+}
+.mega-menu-container{
+  display: table;
+}
+.mega-menu-block{
+  width: 245px;
+  display: table-cell;
+  // width: 284px;
+  // display: table-cell;
+  // min-width: 284px; 
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 13px;
+  color: $FNT-BLACK;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding: 0px !important;
+  text-transform: uppercase;
+}
+.mega-dropdown-menu .dropdown-header:hover{
+  color: $BTN-ORANGE;
+}
+.mega-menu-ul>li{
+  padding-bottom: 3px;
+}
+.mega-menu-ul>li>a{
+  font-weight: normal;
+  font-size:12px;
+  color: $megamenuColor;
+  text-transform: capitalize;
+}
+
+.mega-menu-ul>li>a:hover , .mega-menu-ul>li>a:focus{
+  color: $BTN-ORANGE;
+}
+.brand-wrapper{
+  max-width: 868px;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+/* Mega menu brand section */
+.brand-wrapper-row > .brand-block {
+  border-right: 1px solid $BG-GRAY;
+  border-bottom: 1px solid $BG-GRAY;
+  background-color: #ffffff;
+  color: #d9480f;
+  height: 80px;
+  width: 172px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.brand-wrapper-row .nb{
+  border-right: 1px transparent ;
+}
+.brand-wrapper-row>div>a>img{
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+.all-brands{
+  padding-top: 40px;
+  text-align: center;
+}
+.all-brands>a{
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 12px;
+}

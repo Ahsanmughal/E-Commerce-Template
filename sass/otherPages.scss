@@ -1,0 +1,134 @@
+@import "variables";
+
+/* Home Page / Index */
+
+.home-container .fig{
+  margin-bottom: 40px !important;
+}
+
+.home-container .figsale{
+  border-bottom: 1px solid $BG-DAR-GRAY;
+  padding-bottom: 80px;
+  margin-bottom: 45px;
+}
+
+
+.home-container .newsletter{
+  max-width: 570px;
+  height: 64px;
+  width: 100%;
+  margin: 25px auto 10px;
+  border: 1px solid $BG-DAR-GRAY;
+  padding: 10px;
+}
+
+.newsletter .form-control {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+/* 404 Page */
+.block-404{
+  margin-top: 100px;
+  text-align: center;
+}
+.text-404{
+  font-size: 208px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: $border;
+}
+.head-404{
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: $FNT-BLACK;
+}
+.desc-404{
+  color: $FNT-DARK-GREY;
+  margin-bottom: 40px;
+}
+
+/* About Us */
+.aboutus-block .breadcrumb{
+  margin-bottom: 20px;
+}
+.aboutus-block .heading{
+  color: $FNT-BLACK;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+/* FAQ */
+.faq-block .breadcrumb{
+  margin-bottom: 20px;
+}
+.faq-block .heading{
+  color: $FNT-BLACK;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.faq-block h4{
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.faq-block p , .faq-block span{
+  font-size: 13px;
+}
+
+/* Terms and Conditions */
+.tc-container{
+  font-size: 13px;
+}
+.tc-container ol{
+  padding-left: 20px;
+}
+.tc-container .breadcrumb{
+  margin-bottom: 20px;
+}
+.tc-container .heading{
+  color: $FNT-BLACK;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.tc-container h4{
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Privacy and Policy */
+.pp-container{
+  font-size: 13px;
+}
+.pp-container ol{
+  padding-left: 20px;
+}
+.pp-container .breadcrumb{
+  margin-bottom: 20px;
+}
+.pp-container .heading{
+  color: $FNT-BLACK;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.pp-container h4{
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

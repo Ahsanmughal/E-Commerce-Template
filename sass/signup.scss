@@ -1,0 +1,167 @@
+@import "variables";
+
+/* Signup */
+.regiter-bg{
+  background-color: $BG-HALF-WHITE;
+}
+.register-header{
+  margin: 0 auto;
+  float: none;
+  padding: 12px 0px;
+  text-align: center;
+  width: 337px;
+}
+.register-container{
+  border: 1px solid $BG-DAR-GRAY;
+  width: 587px;
+  margin: 0 auto;
+  float: none;
+  background-color: #ffffff;
+  padding: 40px;
+}
+.register-container .header-text{
+  border-bottom: 1px solid $BG-DAR-GRAY;
+  margin-bottom: 23px;
+}
+.register-container .header-text h3{
+  margin-bottom: 25px;
+}
+.register-container .control-label{
+  color: $FNT-BLACK;
+  font-size: 14px;
+}
+.register-container .form-control{
+  border-radius: 0px !important;
+}
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+}
+.hr-text:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  border:1px solid $BG-DAR-GRAY;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color: #787878;
+  background-color: #fcfcfa;
+}
+.btn-facebook{
+  background-color: #3a579b;
+  color: #ffffff;
+  border-radius: 0px;
+  border:1px solid #3a579b;
+}
+.btn-facebook i {
+  font-size: 24px;
+}
+.btn-facebook span{
+  font-size: 14px;
+}
+.btn-facebook:hover , .btn-facebook:focus{
+  background-color: #3a579b;
+  color: #ffffff;
+  border-radius: 0px;
+  border:1px solid #3a579b;   
+}
+
+.register-footer{
+  margin-top: 37px;
+}
+.register-footer .privacy{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $BG-DAR-GRAY;
+}
+.register-footer h4{
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.anchor-hover:hover{
+  color: $BTN-ORANGE; 
+}
+
+/* Reset Password &  Forget Password*/
+.set-container{
+  height: 540px;
+  width: 770px;
+  margin: 0 auto;
+  float: none;
+  padding: 66px;
+  background-color: #f4f4f4;
+}
+.set-container h2{
+  margin-bottom: 26px;
+}
+.set-container .resetform{
+  margin-top: 65px;
+}
+.set-container .resetform .control-label{
+  color: $FNT-BLACK;
+  font-size: 12px;
+}
+.set-container .resetform .form-control{
+  border-radius: 0px;
+}
+.set-container .resetbtn{
+  margin-top: 52px;
+}
+.set-container .signin{
+  color: $BTN-ORANGE;
+}
+
+
+@media (max-width: $screen-xs-max) {
+  .register-header{
+    width: 300px;
+  }
+  .register-container{
+    width: 100%;
+  }
+  .set-container .resetform{
+    margin-top: 20px;
+  }
+  .set-container h2{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .set-container{
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .set-container{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .register-header{
+    width: 240px;
+  }
+  .register-container{
+    width: 100%;
+    padding: 15px;
+  }
+}

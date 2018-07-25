@@ -1,0 +1,356 @@
+@import "variables";
+
+.accountmain-navheading{
+  background-color: $BG-GRAY;
+  padding:10px 20px;
+  margin-bottom: 30px;
+}
+.accountmain-navheading h4{
+  font-size: 20px;
+}
+
+.account-nav > li{
+  background-color: $BG-GRAY !important;
+  padding:10px 20px !important;
+  border-bottom:1px solid $BG-DAR-GRAY;
+}
+.account-nav > li > a{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.account-nav > li > a:hover{
+  color: $BTN-ORANGE;
+}
+
+.account-nav > li.active > a{
+  color: $BTN-ORANGE;
+}
+
+.account-pane{
+  border:1px solid $BG-DAR-GRAY;
+  padding: 60px 32px 35px 20px;
+}
+
+.account-profile .control-label{
+  font-size: 14px;
+  color: $FNT-BLACK;
+}
+.account-profile .form-control{
+  border-radius: 0px !important;
+}
+.account-profile .radio-group{
+  margin-top: 30px;
+  margin-bottom: 55px;
+}
+
+
+/* Account Orders */
+.order-pane{
+  border:1px solid $BG-DAR-GRAY;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.order-pane .truck-inverse{
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+}
+
+
+.order-pane .order-items .item:last-child{
+  border-bottom: 1px transparent;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.order-pane .order-items{
+  margin-top: 20px;
+}
+
+.order-pane .order-items .order-imgblock{
+  width: 100px;
+  height: 133px;
+}
+
+.order-pane .order-items .title{
+  margin-top: 0px;
+  font-size: 14px;
+  color: $FNT-BLACK;
+  margin-bottom:10px; 
+}
+.order-pane .order-items .code{
+  font-size: 10px;
+  margin-bottom: 16px;
+  color: $FNT-DARK-GREY;
+  display: block;
+}
+.order-pane .order-items .date{
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+.order-pane .order-items .date span{
+  font-size: 12px;
+  color: #FNT-BLACK;
+  font-weight: bold;
+}
+
+.order-pane .order-items .oid{
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+.order-pane .order-items .oid span{
+  font-size: 12px;
+  color: #FNT-BLACK;
+  font-weight: bold;
+}
+.order-pane .order-items .uname{
+  margin-bottom: 16px;
+  font-size: 12px;
+  margin-top: 0px;
+}
+.order-pane .order-items .uname span{
+  font-size: 12px;
+  color: #FNT-BLACK;
+  font-weight: bold;
+}
+.order-pane .order-items .status{
+  float: left;
+  color: #52c300;
+  font-weight: bold;
+  font-size: 16px;
+}
+.order-pane .order-items .status-cancel{
+  color: #ed5643;
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.order-pane .order-items .shipment{
+  float: right;
+  font-size: 12px;
+}
+
+.order-pane .order-items .item{
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $BG-DAR-GRAY;
+}
+
+
+.process-step::before {
+  position: absolute;
+  width: 100%;
+  content: "";
+  top: 30px;
+  display: block;
+}
+.process-step-success::before{
+  height: 5px;
+  background-color: #52c300;
+}
+.process-step-cancel p{
+  color: $FNT-DARK-GREY;
+}
+
+.process-step-cancel::before{
+  height: 5px;
+  background-color: #efefef;
+}
+
+.process-icon {
+  width: 60px;
+  text-align: center;
+  height: 60px;
+  float: left;
+  border-radius: 50%;
+  position: relative;
+  font-size: 25px;
+  line-height: 46px;
+}
+.process-icon-success{
+  background-color: #52c300;
+  border: 5px solid #ffffff;
+  color: #ffffff;
+}
+
+.process-icon-danger{
+  background-color: #ed5643;
+  color: #ffffff;
+  border:5px solid #ffffff;
+}
+.process-icon-cancel{
+  background-color: #efefef;
+  border: 5px solid #ffffff;
+  color: #ffffff;
+}
+
+.process-step p {
+  width: 100%;
+  clear: both;
+  margin-bottom: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 7px;
+}
+
+.process-step {
+  float: left;
+  width: 45%;
+  position: relative;
+}
+.process-step:last-child {
+  margin-right: 0px;
+  width:0%;
+}
+.process-step:last-child::before {
+  display:none;
+}
+
+
+
+/* Account Address Book */
+
+.account-address{
+  background-color: $bgaddressbook;
+  padding: 20px;
+  margin-bottom: 25px;
+  color:$FNT-FOOTER;
+}
+
+.account-address .name{
+  font-size: 16px;
+  color:$FNT-BLACK; 
+  font-weight: bold;
+}
+
+.account-address .address-btn>li>a{
+  font-size: 12px;
+}
+.account-address .address-btn>li>a:hover{
+  color: $BTN-ORANGE;
+}
+
+.account-address .address-btn>li>a:after{
+  content: "";
+  border-right: 1px solid $FNT-BLACK;
+  padding-left: 12px;
+}
+
+.account-address .address-btn>li:last-child>a:after{
+  content:"";
+  border-right: 1px transparent;
+}
+
+.address-modal .control-label{
+  color: $FNT-BLACK;
+}
+.address-modal .form-control{
+  border-radius: 0px !important;
+}
+.address-modal .mobile select{
+  height: 35px;
+  width: 10%;
+}
+.address-modal .mobile input{
+/*   width: 90%; 
+  float: right; */
+  height: 35px;
+}
+
+
+
+/* Account Wishlist */
+.account-wish .panel{
+  border-radius: 0px;
+  border:1px solid $BG-DAR-GRAY;
+  margin-bottom: 30px;
+}
+
+.account-wish .panel-body{
+  padding: 20px;
+}
+.account-wish .panel-footer{
+  background-color: #ffffff;
+  padding: 5px;
+  border-top: 1px solid $BG-DAR-GRAY;
+}
+.wishlist-panel{
+  float: right;
+}
+
+.wishlist-panel .qty-label{
+  display: inline;
+  text-align: center;
+  width: 35px;
+}
+
+.wishlist-panel .unit-quantity-input{
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding: 7px;
+  border-radius: 0;
+  width: 60px;
+  height: 40px;
+  border:1px solid $BG-DAR-GRAY;
+}
+
+.account-wish .title{
+  font-size: 16px;
+  color: $FNT-BLACK;
+  margin-top: 0px;
+}
+.account-wish .code{
+  font-size: 10px;
+  color: $FNT-FOOTER;
+}
+.account-wish .price{
+  font-size: 24px;
+  color: $FNT-BLACK;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.account-wish .price .unit{
+  font-weight: normal; 
+}
+
+.account-wish .panel-footer ul>li>a{
+  font-size: 12px;
+}
+
+.account-wish .panel-footer ul>li>a:hover{
+  color: $BTN-ORANGE;
+}
+
+.account-wish .panel-footer ul>li>a:after{
+  content: "";
+  border-right: 1px solid $FNT-BLACK;
+  padding-left: 12px;
+}
+
+.account-wish .panel-footer ul>li:last-child>a:after{
+  content:"";
+  border-right: 1px transparent;
+}
+
+.wish-imgblock{
+  width: 100px;
+  height: 133px;
+}
+
+/* Account Password Reset */
+
+.account-password .panel{
+  border-radius: 0px;
+  border:1px solid $BG-DAR-GRAY;
+}
+.account-password .panel-body{
+  padding:20px 40px 20px 20px;
+}

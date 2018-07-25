@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-Commerce Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<base href="index.php">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+	<link rel="stylesheet" type="text/css" href="../resources/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/ionicons-master/css/ionicons.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/js-offcanvas/js-offcanvas.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/noUiSlider/nouislider.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+</head>
+<body>
+	<main class="c-offcanvas-content-wrap" role="main" aria-labelledby="accesible-offcanvas">
+		<header class="header">
+   			<div class="header-inner">
+		        <!-- mena Top bar -->
+        		<div class="mena-top-bar">
+		    		<div class="container">
+		        		<div class="row">
+		            		<div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+		                		<span>FREE SHIPPING ON ALL LOCAL ORDERS 150 AED & UP</span>
+		            		</div>
+		            		<div class="col-lg-4 col-md-2 col-sm-12 col-xs-12">
+		                		<span class="payment">Secure payment</span>
+		            		</div>
+		            		<div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 pd-r-0">
+		                		<span class="return">FREE SHIPPING ON ALL INTL ORDERS 500 AED & UP</span>
+		            		</div>
+		        		</div>
+		    		</div>
+				</div>
+        		<div class="container menamall-header pd-0">
+            		<div class="row header-row">
+		                <!-- Header Logo -->
+        		        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 minpad">
+                		    <a class="toggle-btn js-offcanvas-trigger hidden-lg" data-offcanvas-trigger="off-canvas-left-push">
+                        		<i class="ion-navicon navicon dib" aria-hidden="true"></i>
+                    		</a> <!-- hidden-md -->
+                    		<a href="../index.html" class="dib menamall-logo">
+                        		<img src="../img/logo.png" class="img-responsive logo"/>
+                    		</a>
+                		</div>
+		                <!-- search input it is hidden for small and extra small resolution.--> 
+        		        <div class="col-lg-6 col-md-6 col-sm-2 col-xs-2 hidden-sm hidden-xs minpad" style="padding-right: 0px !important; padding-left: 0px !important;">
+						    <div class="header-search">
+						        <form role="form">
+						            <div class="input-group input-group-lg">
+						                <input type="text" class="form-control no-radius typeahead searchhead loading-spinner" placeholder="Search for..."/>
+						                <span class="input-group-btn">
+						                    <button class="btn btn-default input-btn searchbtn" type="button">
+						                        <span class="ion-ios-search Typeahead-search"></span>
+						                        <i class="fa fa-spinner fa-spin fa-fw Typeahead-spinner" style="display: none;"></i>
+						                    </button>
+						                </span>
+						            </div>
+						        </form>
+						    </div>
+						</div>
+
+                		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 minpad" style="padding-right: 0px !important">
+                    		<ul class="header-right-nav">
+						
+							<!-- Login hidden in small and extra small resolution -->
+							<!-- <li class="login-register">
+	    						<a class="login-header" href="signin.html">login</a>
+								<span class="hidden-md hidden-sm hidden-xs">/</span>
+							</li> -->
+
+							<!-- Register hidden in small and extra small resolution -->
+							<!-- <li class="hidden hidden-sm hidden-xs login-register">
+							    <a class="register-header" href="<?php echo Page::generateUrl("signup",array()); ?>">Register</a>
+							</li> -->
+
+	                        <!-- user dropdown menu  it will appear only when user logged in or small and extra screen resolution. it is hidden for lg and md screen sizes -->
+	                        <li id="userDropdown" class="dropdown user-dropdown">
+							    <a id="user-dropdown" class="dropdown-toggle text-uppercase" data-toggle="dropdown" href="">
+							        <span class="uname">USERNAME</span> <span class="caret"></span>
+							    </a>
+							    <ul class="dropdown-menu dropdown-menu-right custom-dropdown" aria-labelledby="dropdownMenu1">
+							        <li>
+							            <a class="text-uppercase" href="account.html"> <i class="fa fa-cog" aria-hidden="true"></i> My Dashboard </a>
+						    	    </li>
+						        	<li class="divider"></li>
+						        	<li>
+						            	<a class="text-uppercase my-order" href="account.html"> <i class="fa fa-file-text-o" aria-hidden="true"></i> My Order </a>
+						        	</li>
+						        	<li class="divider"></li>
+						        	<li>
+							            <a class="text-uppercase" href="../index.html"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+							        </li>
+							    </ul>
+							</li>
+
+
+                	        <!-- search input for sm and xs screen sizes  -->
+                    	    <li class="hidden-lg hidden-md">
+								<a class="dropdown-toggle" data-toggle="search-form" href="#search">
+								    <span class="ion-ios-search search-icon"></span>
+								</a>
+							</li>
+
+	                        <!-- Cart Dropdown -->
+							<li class="dropdown wishlist-dropdown hidden-sm hidden-xs">
+    							<a data-toggle="dropdown" class="dropdown-toggle wishlist-icon wishlist-dropdown-toggle">
+    								<i class="fa fa-heart-o" aria-hidden="true"></i> <span class="wish-item-count">0</span>
+    							</a>
+    							<ul class="dropdown-menu dropdown-menu-right custom-dropdown" aria-labelledby="dropdown1" id="dropdownWishList">
+ 							       	<li>
+            							<div class="media">
+                							<div class="media-left">
+                    							<img src="http://via.placeholder.com/61x46" class="media-object cart-img" style="width:61px;height:46px;">
+                							</div>
+                							<div class="media-body">
+	                    						<div class="row mg0">
+    	                    						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 pd0">
+        	                    						<h5>Aldo Leather Shoes</h5>
+														<p>QTY : 2</p>
+                	        						</div>
+                    	    						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pd0">
+                        	    						<h5>89.5 AED</h5>
+						    	                    </div>
+                        							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pd0">
+                            							<a class="pull-right" href=""> <i class="fa fa-close"></i></a>
+                        							</div>
+                    							</div>
+               								</div>
+            							</div>
+        							</li>
+        							<li>
+            							<div class="text-right cart-btns">
+                							<a href="cart.html" class="btn btn-black btn-md">View Cart</a>
+            							</div>	
+       								</li>
+    							</ul>
+							</li>
+                    	</ul>
+                	</div>
+            	</div>
+            	<!-- Search Form group for mobile version full width -->
+            	<div class="search-form-wrapper header-search">
+                	<!-- <form class="search-form" id="" action="">
+                    	<div class="input-group">
+                        	<input type="text" name="search" class="search form-control" placeholder="Search">
+                        	<span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i> </span>
+                    	</div>
+                	</form> -->
+                	<form role="form">
+                    	<div class="input-group input-group-lg">
+                        	<input type="text" class="form-control no-radius typeahead mb-search" placeholder="Search for..."/>
+                        	<span class="input-group-btn">
+	                            <button class="btn btn-default input-btn mb-searchbtn" type="button">
+    	                            <span class="ion-ios-search Typeahead-search"></span>
+        		                        <i class="fa fa-spinner fa-spin fa-fw Typeahead-spinner" style="display: none;"></i>
+                		            </button>
+		                        </span>
+        		            </div>
+                		</form>
+            		</div>
+        		</div>
+       			 <!-- Megamenu -->
+				<div class="menamall-megamenu hidden-sm hidden-xs">
+				<ul class="list-inline">
+					<!-- Women section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Women</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="#">Clothing</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Hoodies and Sweaters</a></li>
+											<li><a href="productlistview.html">Jeans</a></li>
+											<li><a href="productlistview.html">Jumpsuits and Playsuits</a></li>
+											<li><a href="productlistview.html">Leggings and Pants</a></li>
+											<li><a href="productlistview.html">Lingerie and Nightwear</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Shirts</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Accessories</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Bags</a></li>
+											<li><a href="productlistview.html">Belts</a></li>
+											<li><a href="productlistview.html">Hair Accessories</a></li>
+											<li><a href="productlistview.html">Hats</a></li>
+											<li><a href="productlistview.html">Jwellery</a></li>
+											<li><a href="productlistview.html">Scarves and Gloves</a></li>
+											<li><a href="productlistview.html">Sunglasses and Eyewear</a></li>
+											<li><a href="productlistview.html">Watches</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Shoes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Boots</a></li>
+											<li><a href="productlistview.html">Flat Shoes</a></li>
+											<li><a href="productlistview.html">Flip Flop and Sandals</a></li>
+											<li><a href="productlistview.html">Pumps and Heels</a></li>
+											<li><a href="productlistview.html">Sneakers</a></li>
+											<li><a href="productlistview.html">Sport Shoes</a></li>
+											<li><a href="productlistview.html">Slip Ons</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Men section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Men</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Clothing</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Hoodies and Sweaters</a></li>
+											<li><a href="productlistview.html">Jeans</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Pants</a></li>
+											<li><a href="productlistview.html">Polo Shirts</a></li>
+											<li><a href="productlistview.html">Shirts</a></li>
+											<li><a href="productlistview.html">Shorts</a></li>
+											<li><a href="productlistview.html">Sweats and Joggers</a></li>
+											<li><a href="productlistview.html">Sleepwear</a></li>
+											<li><a href="productlistview.html">Sportswear</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Accessories</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Bags</a></li>
+											<li><a href="productlistview.html">Belts</a></li>
+											<li><a href="productlistview.html">Caps and Hats</a></li>
+											<li><a href="productlistview.html">Jwellery</a></li>
+											<li><a href="productlistview.html">Scarves and Gloves</a></li>
+											<li><a href="productlistview.html">Sunglasses and Eyewear</a></li>
+											<li><a href="productlistview.html">Tie and Suit Accessories</a></li>
+											<li><a href="productlistview.html">Wallets</a></li>
+											<li><a href="productlistview.html">Watches</a></li>
+											<li><a href="productlistview.html">Cases and Misc</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Shoes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Boots</a></li>
+											<li><a href="productlistview.html">Formal </a></li>
+											<li><a href="productlistview.html">Sneakers</a></li>
+											<li><a href="productlistview.html">Sport Shoes</a></li>
+											<li><a href="productlistview.html">Sandals</a></li>
+											<li><a href="productlistview.html">Slip Ons</a></li>
+											<li><a href="productlistview.html">Casual</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Kids section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Kids</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Boys</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Accessories</a></li>
+											<li><a href="productlistview.html">Shoes</a></li>
+											<li><a href="productlistview.html">Bottoms</a></li>
+											<li><a href="productlistview.html">Tops</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Swimwear</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">Girls</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Accessories</a></li>
+											<li><a href="productlistview.html">Shoes</a></li>
+											<li><a href="productlistview.html">Bottoms</a></li>
+											<li><a href="productlistview.html">Tops</a></li>
+											<li><a href="productlistview.html">Outerwear</a></li>
+											<li><a href="productlistview.html">Dresses</a></li>
+											<li><a href="productlistview.html">Swimwear</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Beauty section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Beauty</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">face care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Eyes & lips</a></li>
+											<li><a href="productlistview.html">cleansers</a></li>
+											<li><a href="productlistview.html">exfoliation</a></li>
+											<li><a href="productlistview.html">masks</a></li>
+											<li><a href="productlistview.html">moisterizers & treatments</a></li>
+											<li><a href="productlistview.html">serum and concenterates</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">skin care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Deoderants(invisible)</a></li>
+											<li><a href="productlistview.html">Bath & shower</a></li>
+											<li><a href="productlistview.html">Body care</a></li>
+											<li><a href="productlistview.html">hand & foot</a></li>
+											<li><a href="productlistview.html">Dental(invisible)</a></li>
+											<li><a href="productlistview.html">tools & accessories(invisible)</a></li>
+											<li><a href="productlistview.html">sets</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a class="dropdown-header" href="">perfumes</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li></li>
+											<li><a href="productlistview.html">fragrances</a></li>
+											<li><a href="productlistview.html">frangrance sets</a></li>
+										</ul>
+										<h4><a class="dropdown-header" href="">gift set</a></h4>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Grooming Section -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Grooming</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container">
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">face care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">Eyes & lips</a></li>
+											<li><a href="productlistview.html">cleansers</a></li>
+											<li><a href="productlistview.html">Mosituerizers and treatments</a></li>
+											<li><a href="productlistview.html">serums and concenterates</a></li>
+											<li><a href="productlistview.html">toners and mist</a></li>
+											<li><a href="productlistview.html">sets</a></li>
+											<li><a href="productlistview.html">exfoliations</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">shaving</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">pre shave</a></li>
+											<li><a href="productlistview.html">shaving</a></li>
+											<li><a href="productlistview.html">aftershave</a></li>
+											<li><a href="productlistview.html">tools and accessories</a></li>
+										</ul>
+									</div>
+									<div class="mega-menu-block">
+										<h4><a href="" class="dropdown-header">sun care</a></h4>
+										<ul class="list-unstyled mega-menu-ul">
+											<li><a href="productlistview.html">face</a></li>
+											<li><a href="productlistview.html">body</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Electronics -->
+					<li class="dropdown mega-dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" >Electronics</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container mega-menu-container"> 
+									<div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Televisions</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="productlistview.html">TVs</a></li>
+												<li><a href="productlistview.html">Accessories</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Large Appliances</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="productlistview.html">Washer/Dryer</a></li>
+												<li><a href="productlistview.html">Ovens</a></li>
+												<li><a href="productlistview.html">Hobs/Hoods</a></li>
+												<li><a href="productlistview.html">Dish Washers</a></li>
+												<li><a href="productlistview.html">Refrigerators</a></li>
+												<li><a href="productlistview.html">Water Dispensers</a></li>
+												<li><a href="productlistview.html">Air Conditioner</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Mobiles and Tablets</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="">Mobiles </a></li>
+												<li><a href="">Tablets</a></li>
+												<li><a href="">Smart Watches</a></li>
+												<li><a href="">Accessories</a></li>
+											</ul>
+										</div>
+										<div class="mega-menu-block">
+											<h4><a class="dropdown-header" href="">Laptops</a></h4>
+											<ul class="list-unstyled mega-menu-ul">
+												<li><a href="">Laptops</a></li>
+												<li><a href="">Gaming Laptops</a></li>
+												<li><a href="">Desktops</a></li>
+											</ul>
+										</div>
+									</div>  
+								</div>
+							</li>
+						</ul>
+					</li>
+
+
+					<!-- Brands -->
+					<li class="dropdown mega-dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">Brands</a>
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li>
+								<div class="container">
+									<div class="brand-wrapper">
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/adidas.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/nike.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/swarovski.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/armani.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/burberry.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"> <a href="productlistview.html"><img src="../img/mk.png"></a></div>
+											<div class="brand-block"> <a href="productlistview.html"><img src="../img/rayban.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/cartier.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/channel.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/gucci.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/rl.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/christian_louboutian.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/dior.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/prada.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/fendi.png"></a></div>
+										</div>
+										<div class="brand-wrapper-row">
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/d_g.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/lacoste.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/jordan.png"></a></div>
+											<div class="brand-block"><a href="productlistview.html"><img src="../img/ax.png"></a></div>
+											<div class="nb brand-block"><a href="productlistview.html"><img src="../img/versace.png"></a></div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<!-- Sale -->
+					<li><a href="">Sale</a></li>
+				</ul>
+				</div>
+    		</div>
+		</header>
+
+		<div class="main-height"></div>
+		<div class="container">
+			<!-- Account Brearcrumbs -->
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="breadcrumb breadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Dashboard</a></li>
+						<li><a class="active" href="#">Profile</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<div class="accountmain-navheading">
+						<h4>My Dashboard</h4>
+					</div>
+					<ul class="nav account-nav">
+	  					<li class="active"> <a href="#account_profile" data-toggle="pill">My Profile</a> </li>
+	  					<li> <a href="#account_order" data-toggle="pill">My Orders</a> </li>
+	  					<li> <a href="#account_addressbook" data-toggle="pill">My Address Book</a> </li>
+	  					<li> <a href="#account_wishlist" data-toggle="pill">My WISH LIST</a> </li>
+	  					<li> <a href="#account_password" data-toggle="pill">Change Password</a> </li>
+			  			<li> <a href="../index.html">Log out</a> </li>
+					</ul>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<div class="tab-content">
+						<!-- Account Profile -->
+						<div class="tab-pane active" id="account_profile">
+							<div class="accountmain-navheading">
+								<h4>My Profile</h4>
+							</div>
+							<div class="account-pane account-profile">
+								<form role="form">
+									<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="form-group">
+												<label class="control-label">First Name</label>
+												<input type="text" name="firstname" class="form-control" placeholder="First Name" />
+											</div>
+											<div class="form-group">
+												<label class="control-label">Email</label>
+												<input type="email" name="email" class="form-control" placeholder="username@gmail.com" />
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12">
+											<div class="form-group">
+												<label class="control-label">Last Name</label>
+												<input type="text" name="lastname" class="form-control" placeholder="Last Name" />
+											</div>
+											<div class="form-group">
+												<label class="control-label">Date of Birth (optional)</label>
+												<div class="form-inline">
+													<select class="form-control">
+														<option>Month</option>
+														<option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option> <option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option> <option value="8">September</option><option value="9">October</option><option value="10">Novemver</option> <option value="11">December</option>
+													</select>
+													<select class="form-control day-select">
+														<option>Day</option> <option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option> <option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option> <option value="10">11</option><option value="11">12</option><option value="12">13</option><option value="13">14</option><option value="14">15</option> <option value="15">16</option><option value="16">17</option><option value="17">18</option><option value="18">19</option><option value="19">20</option> <option value="20">21</option><option value="21">22</option><option value="22">23</option><option value="23">24</option><option value="24">25</option> <option value="25">26</option><option value="26">27</option><option value="27">28</option><option value="29">30</option><option value="30">31</option>
+													</select>
+													<select class="form-control year-select">
+														<option>Year</option> <option value="0">2001</option><option value="1">2002</option><option value="2">2003</option><option value="3">2004</option><option value="4">2005</option> <option value="5">2006</option><option value="6">2007</option><option value="7">2008</option><option value="8">2009</option><option value="9">2010</option> <option value="10">2011</option><option value="11">2012</option><option value="12">2013</option><option value="13">2014</option><option value="14">2015</option> <option value="15">2016</option><option value="16">2017</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row radio-group">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<div class="radio radio-orange radio-inline">
+            									<input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+            									<label for="inlineRadio1"> Male </label>
+									        </div>
+          									<div class="radio radio-orange radio-inline">
+            									<input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+            									<label for="inlineRadio2"> Female </label>
+          									</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12">
+											<a href="" class="btn btn-md btn-black pull-right">SAVE ALL CHANGES</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- Account Order -->
+						<div class="tab-pane" id="account_order">
+							<div class="accountmain-navheading">
+								<h4>My Orders</h4>
+							</div>
+							<div class="account-pane order-pane">
+								<!-- Process Line Success -->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="process-row">
+	      									<div class="process-step process-step-success">
+	        									<div class="process-icon process-icon-success"> <i class="fa fa-shopping-basket" aria-hidden="true"></i> </div>
+										  	    <p>Ordered</p>
+									    	</div>
+									      	<div class="process-step process-step-success">
+	        									<div class="process-icon process-icon-success">
+	        										<i class="fa fa-truck truck-inverse" aria-hidden="true"></i> 
+									        	</div>
+										  	    <p>In Transit</p>
+	    	  								</div>
+									      	<div class="process-step">
+	        									<div class="process-icon process-icon-success">
+	        										<i class="fa fa-check" aria-hidden="true"></i>
+										        </div>
+										  	    <p>Delivered</p>
+	    	  								</div>
+								    	</div>
+									</div>
+								</div>
+
+								<!-- Success Delivery -->
+								<div class="row order-items">
+									<div class="col-lg-12 col-md-12">
+										<div class="media item">
+								  	    	<div class="media-left">
+    	      									<img src="../img/order-img.png" class="media-object">
+								      		</div>
+								        	<div class="media-body">
+									          	<h5 class="title">PUMA- WHITE Beared T-Shirt</h5>
+									          	<span class="code">Product Code : MSN-MJ-555-5558</span>
+									          	<h5 class="date">Order place on: <span>07 December, 2017</span></h5>
+									          	<h5 class="oid">Order id: <span>WMR00R567</span></h5>
+									          	<h5 class="uname">Recipient: <span>User Name</span></h5>
+									          	<h5 class="status">Delivered</h5>
+									          	<h5 class="shipment">Shipment 1 OF 1</h5>
+								        	</div>
+								      	</div>
+								      	<div class="media">
+  	      									<div class="media-left">
+    	      									<img src="../img/order-img.png" class="media-object">
+									      	</div>
+									       	<div class="media-body">
+									          	<h5 class="title">PUMA- WHITE Beared T-Shirt</h5>
+									          	<span class="code">Product Code : MSN-MJ-555-5558</span>
+									          	<h5 class="date">Order place on: <span>07 December, 2017</span></h5>
+									          	<h5 class="oid">Order id: <span>WMR00R567</span></h5>
+									          	<h5 class="uname">Recipient: <span>User Name</span></h5>
+									          	<h5 class="status">Delivered</h5>
+									          	<h5 class="shipment">Shipment 1 OF 2</h5>
+								        	</div>
+								      	</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="account-pane order-pane">
+								<!-- Process Line Success -->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="process-row">
+	      									<div class="process-step process-step-cancel">
+	        									<div class="process-icon process-icon-danger">
+	        										<i class="fa fa-close" aria-hidden="true"></i>
+										        </div>
+										  	    <p>Ordered</p>
+									    	</div>
+	      									<div class="process-step process-step-cancel">
+	        									<div class="process-icon process-icon-cancel">
+	        										<i class="fa fa-truck truck-inverse" aria-hidden="true"></i> 
+									        	</div>
+										  	    <p>In Transit</p>
+									    	</div>
+										    <div class="process-step process-step-cancel">
+	        									<div class="process-icon process-icon-cancel">
+	        										<i class="fa fa-check" aria-hidden="true"></i>
+											    </div>
+										  	    <p>Delivered</p>
+									    	</div>
+	    								</div>
+									</div>
+								</div>
+
+								<!-- Success Delivery -->
+								<div class="row order-items">
+									<div class="col-lg-12 col-md-12">
+										<div class="media">
+  	      									<div class="media-left">
+    	      									<img src="../img/order-img.png" class="media-object">
+									      	</div>
+        									<div class="media-body">
+									          	<h5 class="title">PUMA- WHITE Beared T-Shirt</h5>
+									          	<span class="code">Product Code : MSN-MJ-555-5558</span>
+									          	<h5 class="date">Order place on: <span>07 December, 2017</span></h5>
+									          	<h5 class="oid">Order id: <span>WMR00R567</span></h5>
+									          	<h5 class="uname">Recipient: <span>User Name</span></h5>
+									          	<h5 class="status-cancel">Canceled</h5>
+									          	<h5 class="shipment">Shipment 1 OF 1</h5>
+								        	</div>
+								      	</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Account Address Book -->
+						<div class="tab-pane" id="account_addressbook">
+							<div class="accountmain-navheading">
+								<h4>My Address Book</h4>
+							</div>
+							<!-- Repeat Address Book -->
+							<div class="account-address">
+								<h4 class="name">Shyju Kuyiloor Kavil</h4>
+								<p>Al Masra Street, Marina Plaza</p>
+								<p>Suite 3502</p>
+								<p>Dubai, United Arab Emirates </p>
+								<p>Mobile : +971 98 765 4321</p>
+								<ul class="list-inline address-btn">
+									<li><a 	data-toggle="modal" data-target="#editaddressModal" href=""><i class="fa fa-edit"></i> EDIT</a></li>
+									<li><a data-toggle="modal" data-target="#deleteaddressModal" href=""><i class="fa fa-trash"></i> REMOVE</a></li>
+								</ul>
+							</div>
+
+							<div class="account-address">
+								<h4 class="name">Ahsan Mustafa</h4>
+								<p>Al Masra Street, Marina Plaza</p>
+								<p>Suite 3502</p>
+								<p>Dubai, United Arab Emirates </p>
+								<p>Mobile : +971 52 872 7140</p>
+								<ul class="list-inline address-btn">
+									<li><a data-toggle="modal" data-target="#editaddressModal" href=""><i class="fa fa-edit"></i> EDIT</a></li>
+									<li><a data-toggle="modal" data-target="#deleteaddressModal" href=""><i class="fa fa-trash"></i> REMOVE</a></li>
+								</ul>
+							</div>
+							<a href="" data-toggle="modal" data-target="#newaddressModal" class="btn btn-black btn-md pull-right">Add New Address</a>
+						</div>
+
+						<!-- Account Wish List -->
+						<div class="tab-pane" id="account_wishlist">
+							<div class="accountmain-navheading">
+								<h4>Wish List</h4>
+							</div>
+							<div class="row account-wish">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<div class="media">
+												<div class="media-left">
+													<img src="../img/order-img.png" class="media-object">
+												</div>
+												<div class="media-body">
+													<div class="pull-left">
+														<h5 class="title">PUMA- WHITE Beared T-Shirt</h5>
+          												<span class="code">Product Code : MSN-MJ-555-5558</span>
+          												<h3 class="price">100 <span class="unit">AED</span></h3>
+          												<span><i class="fa fa-angle-right"></i> Size: 32</span>
+													</div>
+													<div class="wishlist-panel">
+														<span class="qty-label">QTY</span>
+														<select size="1" class="unit-quantity-input">
+															<option value="1" selected="selected">1</option>
+															<option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option>
+															<option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option>
+															<option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+														</select>								
+													</div>
+												</div>
+											</div>	
+										</div>
+										<div class="panel-footer">
+											<ul class="list-inline pull-right">
+												<li><a href=""><i class="fa fa-edit"></i> Edit</a></li>
+												<li><a href=""><i class="fa fa-trash"></i> Remove</a></li>
+												<li><a href=""><i class="ion ion-bag"></i> Add to cart</a></li>
+											</ul>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row account-wish">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<div class="media">
+												<div class="media-left">
+													<img src="../img/order-img.png" class="media-object">
+												</div>
+												<div class="media-body">
+													<div class="pull-left">
+														<h5 class="title">PUMA- WHITE Beared T-Shirt</h5>
+          												<span class="code">Product Code : MSN-MJ-555-5558</span>
+          												<h3 class="price">100 <span class="unit">AED</span></h3>
+          												<span><i class="fa fa-angle-right"></i> Size: 32</span>
+													</div>
+													<div class="wishlist-panel">
+														<span class="qty-label">QTY</span>
+														<select size="1" class="unit-quantity-input">
+															<option value="1" selected="selected">1</option>
+															<option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option>
+															<option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option>
+															<option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+														</select>								
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel-footer">
+											<ul class="list-inline pull-right">
+												<li><a href=""><i class="fa fa-edit"></i> Edit</a></li>
+												<li><a href=""><i class="fa fa-trash"></i> Remove</a></li>
+												<li><a href=""><i class="ion ion-bag"></i> Add to cart</a></li>
+											</ul>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Account Password -->
+						<div class="tab-pane" id="account_password">
+  							<div class="accountmain-navheading">
+								<h4>Password Reset</h4>
+							</div>
+							<div class="row account-password">
+								<div class="col-md-12">
+									<div class="panel panel-default">
+										<div class="panel-body">
+											<form role="form">
+												<div class="form-group">
+													<label class="control-label">Current Password</label>
+													<input type="password" name="currentpassword" class="form-control" placeholder="xxxxx"/>
+												</div>
+												<div class="form-group">
+													<label class="control-label">New Password</label>
+													<input type="password" name="newpassword" class="form-control" placeholder="xxxxx"/>
+												</div>
+												<div class="form-group">
+													<label class="control-label">Repeat Password</label>
+													<input type="password" name="repeatpassword" class="form-control" placeholder="xxxxx"/>
+												</div>
+												<div class="form-group">
+													<a href="" class="btn btn-black btn-md pull-right">Update my new password</a>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+		<div class="container">
+			<div class="row footer-container">
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Information</h5>
+						<ul class="footer-links">
+							<li><a href="">About Us</a></li>
+							<li><a href="">Our Team</a></li>
+							<li><a href="">Career</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">My Account</h5>
+						<ul class="footer-links">
+							<li><a href="">My Account</a></li>
+							<li><a href="">Order History</a></li>
+							<li><a href="">Order Tracking</a></li>
+							<li><a href="">Wish List</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Policies</h5>
+						<ul class="footer-links">
+							<li><a href="">Delivery</a></li>
+							<li><a href="">Return & Refund</a></li>
+							<li><a href="">Privacy Policy</a></li>
+							<li><a href="">Intellectial Property</a></li>
+							<li><a href="">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col">
+					<div class="col-footer">
+						<h5 class="footer-heading">Customer Service</h5>
+						<ul class="footer-links">
+							<li><a href="">Working Hours</a></li>
+							<li><a href="">Contact Us</a></li>
+							<li class="android"><a href=""> (+971)4 521 4800 </a></li>
+							<li class="whatsapp"><a href=""> (+971)4 521 4800 </a></li>
+							<li class="menamall"><a href=""> cs@menamall.com </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col">
+					<div class="col-footer">
+						<div class="pull-left">
+							<h5 class="footer-heading">Follow us</h5>
+							<ul class="list-inline social-icons">
+								<li><a href="https://www.facebook.com/menamallHQ/"><i class="ion-social-facebook"></i></a></li>
+								<li><a href="https://www.twitter.com/menamallHQ"><i class="ion-social-twitter"></i></a></li>
+								<li><a href="https://www.instagram.com/menamallhq/"><i class="ion-social-instagram-outline"></i></a></li>
+								<li><a href=""><i class="ion-social-pinterest-outline"></i></a></li>
+								<li><a href=""><i class="ion-social-googleplus-outline"></i></a></li>
+							</ul>
+							<div class="newsletter">
+								<form id="subscribe-form">
+									<div class="input-group">
+										<input class="form-control" name="email" type="email" placeholder="E-MAIL">
+										<span class="input-group-btn">
+											<button id="subscribe" class="btn btn-md btn-black" type="button">SUBSCRIBE</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center footer-trademark">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div style="padding: 10px;">
+						<p>© 2018 KSK General Trading L.L.C</p>
+						<div class="economic-icon">
+							<img src="../img/ecnomic-icon.png" class="img-responsive"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Delete ADDRESS MODAL  -->
+		<div id="deleteaddressModal" class="modal fade" role="dialog">
+			<form role="form">
+		  		<div class="modal-dialog modal-md">
+			    	<div class="modal-content">
+				    	<div class="modal-header">
+		  		    		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    		  		<h4 class="modal-title text-brown">Delete Address Book</h4>
+		    			</div>
+		    			<div class="modal-body">
+		    				<p>Are you sure to delete this address book?</p>
+				      	</div>
+			    		<div class="modal-footer">
+		  	    			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  	    			<button type="button" class="btn btn-black" data-dismiss="modal">Delete</button>
+		      			</div>
+			    	</div>
+		  		</div>
+		  	</form>
+		</div>
+
+
+		<!-- EDIT ADDRESS MODAL  -->
+		<div id="editaddressModal" class="modal fade address-modal" role="dialog">
+			<form role="form">
+					<div class="modal-dialog modal-md">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title text-brown">Edit Address Book</h4>
+			    		</div>
+						<div class="modal-body">
+							<div class="form-group">
+			    				<label class="control-label">First Name</label>
+								<input type="text" name="firstname" class="form-control" placeholder="First Name" />
+			    			</div>
+							<div class="form-group">
+								<label class="control-label">Last Name</label>
+								<input type="text" name="lastname" class="form-control" placeholder="Last Name" />
+							</div>
+			    			<div class="form-group">
+								<label class="control-label">Country</label>
+			    				<select class="form-control">
+			    					<option value="0">United Arab Emirates</option>
+			    					<option value="1">Saudi Arabia</option>
+			    				</select>
+			    			</div>
+							<div class="form-group">
+								<label class="control-label">City</label>
+			    				<select class="form-control">
+			    					<option value="0">Dubai</option>
+			    					<option value="1">Sharjah</option>
+			    					<option value="2">Ajman</option>
+			    					<option value="3">Al Ain</option>
+			    					<option value="4">Fujairah</option>
+			    					<option value="5">Abu Dhabi</option>
+			    					<option value="6">Ras Al Khaimah</option>
+			    				</select>
+			    			</div>
+							<div class="form-group">
+								<label class="control-label">Mobile</label>
+								<input type="text" name="mobile" class="form-control" placeholder="Mobile"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Address Line ( Area / Street, Building Name)</label>
+								<textarea class="form-control" style="resize: none" rows="3"></textarea>
+							</div>
+							</div>
+				    	<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-black" data-dismiss="modal">Update</button>
+							</div>
+					</div>
+					</div>
+				</form>
+		</div>
+
+
+		<!-- New ADDRESS MODAL  -->
+		<div id="newaddressModal" class="modal fade address-modal" role="dialog">
+			<form role="form">
+					<div class="modal-dialog modal-md">
+					<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title text-brown">New Address Book</h4>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label class="control-label">First Name</label>
+								<input type="text" name="firstname" class="form-control" placeholder="First Name" />
+							</div>
+			    			<div class="form-group">
+								<label class="control-label">Last Name</label>
+								<input type="text" name="lastname" class="form-control" placeholder="Last Name" />
+							</div>
+							<div class="form-group">
+								<label class="control-label">Country</label>
+			    				<select class="form-control">
+			    					<option value="0">United Arab Emirates</option>
+			    					<option value="1">Saudi Arabia</option>
+			    				</select>
+			    			</div>
+							<div class="form-group">
+			    				<label class="control-label">City</label>
+			    				<select class="form-control">
+			    					<option value="0">Dubai</option>
+			    					<option value="1">Sharjah</option>
+			    					<option value="2">Ajman</option>
+			    					<option value="3">Al Ain</option>
+			    					<option value="4">Fujairah</option>
+			    					<option value="5">Abu Dhabi</option>
+			    					<option value="6">Ras Al Khaimah</option>
+			    				</select>
+			    			</div>
+							<div class="form-group">
+								<label class="control-label">Mobile</label>
+								<input type="text" name="mobile" class="form-control" placeholder="Mobile"/>
+			    			</div>
+							<div class="form-group">
+								<label class="control-label">Address Line ( Area / Street, Building Name)</label>
+								<textarea class="form-control" style="resize: none" rows="3"></textarea>
+			    			</div>
+				      	</div>
+					    <div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-black" data-dismiss="modal">Save</button>
+							</div>
+					</div>
+					</div>
+				</form>
+		</div>
+	</main>
+	<aside class="js-offcanvas" data-offcanvas-options='{"modifiers":"left,push"}' id="off-canvas-left-push" role="complementary">
+        <ul class="list-unstyled side-nav-ul">
+            <li> <a href="../index.html">Home</a> </li>
+            <li> <a href="account.html">My Account</a> </li>
+            <li><label>Categories</label></li>
+            <li>
+                <a href="#women" data-toggle="collapse">Women <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="women">
+                    <a href="productlistview.html" class="list-group-item">Clothing</a>
+                    <a href="productlistview.html" class="list-group-item">Accessories</a>
+                    <a href="productlistview.html" class="list-group-item">Shoes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#men" data-toggle="collapse">Men <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="men">
+                    <a href="productlistview.html" class="list-group-item">Clothing</a>
+                    <a href="productlistview.html" class="list-group-item">Accessoreis</a>
+                    <a href="productlistview.html" class="list-group-item">Shoes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#kids" data-toggle="collapse">Kids <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="kids">
+                    <a href="productlistview.html" class="list-group-item">Boys</a>
+                    <a href="productlistview.html" class="list-group-item">Girls</a>
+                    <a href="productlistview.html" class="list-group-item">Toys</a>
+                </div>
+            </li>
+            <li>
+                <a href="#beauty" data-toggle="collapse">Beauty <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="beauty">
+                    <a href="productlistview.html" class="list-group-item">Hair Care</a>
+                    <a href="productlistview.html" class="list-group-item">Make Up And Accessories</a>
+                    <a href="productlistview.html" class="list-group-item">Nail Care</a>
+                </div>
+            </li>
+            <li>
+                <a href="#grooming" data-toggle="collapse">Grooming <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="grooming">
+                    <a href="productlistview.html" class="list-group-item">Face Care</a>
+                    <a href="productlistview.html" class="list-group-item">Hair Care</a>
+                    <a href="productlistview.html" class="list-group-item">Shaving</a>
+                </div>
+            </li>
+            <li>
+                <a href="#brands" data-toggle="collapse">Brands <i class="glyphicon glyphicon-plus pull-right"></i></a>
+                <div class="collapse" id="brands">
+                    <a href="productlistview.html" class="list-group-item">Adidas</a>
+                    <a href="productlistview.html" class="list-group-item">Nike</a>
+                    <a href="productlistview.html" class="list-group-item">Louis Vitton</a>
+                </div>
+            </li>
+            <li> <a>Sale</a> </li>
+        </ul>
+    </aside>
+
+	<script type="text/javascript" src="../resources/bootstrap/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/bootstrap/js/bootstrap.min.js"></script>	
+	<!--  js-offcanvas  -->
+	<script type="text/javascript" src="../resources/js-offcanvas/modernizr.js"></script>
+	<script type="text/javascript" src="../resources/js-offcanvas/js-offcanvas.pkgd.min.js"></script>
+	<!-- nouislider for min/max price -->
+	<script type="text/javascript" src="../resources/noUiSlider/wNumb.js"></script>
+	<script type="text/javascript" src="../resources/noUiSlider/nouislider.js"></script>
+	<!-- Typehead -->
+	<script type="text/javascript" src="../resources/typehead/typeahead.bundle.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="../resources/slick/slick.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
